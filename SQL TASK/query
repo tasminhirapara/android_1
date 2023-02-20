@@ -1,0 +1,20 @@
+1. Display FirstName According to Ascending order
+->SELECT first_name FROM t1 ORDER BY first_name ASC
+2. Display User Detail According to Lower to Higher Salary
+->SELECT * FROM t1 ORDER BY salary ASC
+3. Display Firstname Whose Firstname Starts with J.
+->SELECT first_name FROM t1 WHERE first_name LIKE 'j%'
+4. Display All Employee Whose Designation is CLERK
+->SELECT * FROM t1 WHERE designation='clerk'
+5. Remove Records which is belong from HR ANALYST
+->DELETE FROM t1 WHERE designation ='hr analyst'
+6. Display User Detail Whose Department No. is 40
+->SELECT * FROM t1 WHERE deptno='40'
+7. Display Max salary from Table
+->SELECT MAX(salary) FROM t1
+8. Display Minimum Salary from Table
+->SELECT MIN(salary) FROM t1
+9. Display Total Salary of Employee
+->SELECT SUM(salary) FROM t1
+10. Display Second Highest Salary from Table
+->SELECT MAX(salary) FROM t1 WHERE salary < (SELECT MAX(salary) FROM t1)
