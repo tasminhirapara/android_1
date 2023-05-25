@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">modulefour</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="heading">
+
+        <item>tasmin</item>
+        <item>smit</item>
+        <item>meet</item>
+        <item>priyansh</item>
+        <item>kanak</item>
+        <item>Dushyant</item>
+        <item>renish</item>
+        <item>darshit</item>
+        <item>jenish</item>
+
+
+    </string-array>
+</resources>
