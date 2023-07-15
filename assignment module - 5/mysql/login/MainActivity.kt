@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             var email = emailid.text.toString()
             var pass = password.text.toString()
 
-            var stringRequest : StringRequest = object :StringRequest(Method.POST,"https://123234345.000webhostapp.com/registration1/registration.php",Response.Listener {
+            var stringRequest : StringRequest = object :StringRequest(Method.POST,"https://tasmin123.000webhostapp.com/topsproject/signup.php",Response.Listener {
                 Toast.makeText(applicationContext, "Registration done", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(applicationContext,MainActivity2::class.java))
 
