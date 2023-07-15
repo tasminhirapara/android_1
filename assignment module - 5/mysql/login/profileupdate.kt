@@ -29,11 +29,20 @@ class profileupdate : AppCompatActivity() {
 
         selectProfileButton.setOnClickListener {
             dispatchTakePictureIntent()
+            
         }
     }
 
     private fun dispatchTakePictureIntent()
     {
+         var name = binding.edt1.text.toString()
+            var path = getPath(filepath)
+            MultipartUploadRequest(this,"https://tasmin123.000webhostapp.com/API1/upload.php")
+                .addFileToUpload(path,"url")
+                .addParameter("name",name)
+                .setMaxRetries(2)
+                . startUpload()
+            Toast.makeText(applicationContext,"Success",Toast.LENGTH_LONG).show()
         var stringRequest : StringRequest = object :StringRequest(Method.POST,"https://tasmin123.000webhostapp.com/topsproject/signup.php",Response.Listener {
             Toast.makeText(applicationContext, "Registration done", Toast.LENGTH_SHORT).show()
                                                                                                                                                              },
@@ -45,7 +54,7 @@ class profileupdate : AppCompatActivity() {
 
             override fun getParams(): MutableMap<String, String>? {
                 var map = HashMap<String,String>()
-                map["firstname"] = fname
+                map["image"] = image
                 
 
                 return map
@@ -56,6 +65,8 @@ class profileupdate : AppCompatActivity() {
         queue.add(stringRequest)
 
     }
+
+    
 
         }
     }
