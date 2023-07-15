@@ -14,7 +14,7 @@ import com.android.volley.toolbox.Volley
 
 class MainActivity2 : AppCompatActivity() {
 
-    lateinit var emailid : EditText
+    lateinit var phone : phone
     lateinit var password : EditText
     lateinit var login : Button
 
@@ -23,15 +23,15 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        emailid = findViewById(R.id.email)
+        phone = findViewById(R.id.phone)
         password = findViewById(R.id.pass)
         login = findViewById(R.id.login)
 
         login.setOnClickListener {
-            var email = emailid.text.toString()
+            var phone = phone.text.toString()
             var pass = password.text.toString()
 
-            var stringRequest: StringRequest = object :StringRequest(Method.POST,"https://123234345.000webhostapp.com/registration1/login.php",Response.Listener {
+            var stringRequest: StringRequest = object :StringRequest(Method.POST,"https://tasmin123.000webhostapp.com/topsproject/login.php",Response.Listener {
                     response->
                 if(response.trim{ it <= ' ' } == "0")
                 {
@@ -51,7 +51,7 @@ class MainActivity2 : AppCompatActivity() {
             {
                 override fun getParams(): MutableMap<String, String>? {
                     var map = HashMap<String,String>()
-                    map["email"] = email
+                    map["phone"] = phone
                     map["password"] = pass
 
                     return map
